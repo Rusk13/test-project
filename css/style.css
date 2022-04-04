@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 60px 0 60px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.main{
+    width: 870px;
+    height: 200px;
+    background-color: red;
+}
+.sidebar{
+    width: 270px;
+    height: 200px;
+    background-color: green;
+}
