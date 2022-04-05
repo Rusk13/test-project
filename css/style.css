@@ -8,10 +8,14 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+img {
+    display: block;
+}
+
 .container {
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 60px 0 60px 0;
+    padding: 60px 0 60px 0;
 }
 .row {
     display: flex;
@@ -27,7 +31,30 @@ body {
     height: 200px;
     background-color: green;
 }
+
+.cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards-holder > .card-link {
+    margin-bottom: 30px;
+}
+
 /* Cards */
+
+a.card-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+a.card-link:hover {
+    opacity: 0.9;
+    transform: translateY(-5px);
+}
+
 .card {
     position: relative;
     width: 270px;
@@ -52,7 +79,7 @@ body {
     background-color: #525252;
     border-radius: 4px;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 23px;
     color: #000;
 }
 
@@ -61,9 +88,10 @@ body {
 }
 .card__badge--credit {
     background-color: #11be75;
+    color: #fff;
 }
 .card__content {
-    padding: 15px 15px 20px;
+    padding: 16px 15px 20px;
 }
 .card__title {
     font-weight: bold;
