@@ -84,6 +84,10 @@ img {
     margin-bottom: 30px;
 }
 
+.card-link--hidden {
+    display: none !important;
+}
+
 /* Cards */
 
 a.card-link {
@@ -219,6 +223,7 @@ a.card-link:hover {
     line-height: 1.16;
     color: #000000;
     margin-bottom: 19px;
+    cursor: pointer;
 }
 
 .widget__title::after {
@@ -233,7 +238,15 @@ a.card-link:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.widget__title--active::after {
+    transform: rotate(180deg);
+}
 .widget__body {
+}
+
+.widget__body--hidden {
+    display: none;
 }
 
 /* Location buttons group */
@@ -363,6 +376,10 @@ a.card-link:hover {
     cursor: pointer;
 }
 
+.checkbox--hidden {
+    display: none;
+}
+
 .checkbox + .checkbox {
     margin-top: 15px;
 }
@@ -434,6 +451,12 @@ a.card-link:hover {
     color: #4290c9;
     transition: color 0.2s ease-in;
 }
+
+.widget__show-hidden:active,
+.widget__show-hidden:focus {
+    outline: none;
+}
+
 .widget__show-hidden:hover {
     color: #0089eb;
     text-decoration: underline;
@@ -547,6 +570,7 @@ a.card-link:hover {
 /* Button toggle sidebar */
 
 .toggle-sidebar {
+    display: none;
     position: fixed;
     z-index: 9;
     right: 15px;
@@ -554,16 +578,25 @@ a.card-link:hover {
     width: 45px;
     height: 45px;
     background-color: rgb(71, 71, 71);
-    border: none;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 829px) {
+    .toggle-sidebar {
+        display: flex;
+    }
 }
 
 .menu-icon-wrapper {
-    /* width: 30px;
-    height: 30px; */
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
 
 .menu-icon {
